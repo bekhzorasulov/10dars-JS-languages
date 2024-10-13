@@ -20,7 +20,7 @@ import country from "./country.js";
 // console.log(getTopLanguages(country));
 
 const getToplanguages = country.reduce((acc, curVal) => {
-  if (typeof curVal.languages === "object") {
+  if (curVal.languages) {
     const getLanguages = Object.keys(curVal.languages);
     getLanguages.forEach((languages) => {
       if (acc[languages]) {
