@@ -21,7 +21,7 @@ import country from "./country.js";
 
 const getToplanguages = country.reduce((acc, curVal) => {
   if (curVal.languages) {
-    const getLanguages = Object.keys(curVal.languages);
+    const getLanguages = Object.values(curVal.languages);
     getLanguages.forEach((languages) => {
       if (acc[languages]) {
         acc[languages]++;
